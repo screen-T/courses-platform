@@ -1,0 +1,231 @@
+*{
+    background-color: #f8f6f9;
+    
+  background-image: linear-gradient(to bottom, #f8f6f9 0%, #f8f6f9 100%);
+  background-clip: content-box, padding-box;
+}
+nav{
+    font-size: 15px;
+    padding-inline: 1px;
+    margin-left: 10px;
+    text-decoration: none;
+
+}
+.nav{
+    padding-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
+nav a:hover{
+    color: rgb(75, 194, 135);
+    transition: 0.5s;
+}
+nav a{
+    position:relative;
+    text-decoration: none;
+    color:black ;
+    padding:20px;
+}
+.nav-element::before{
+    content:'' ;
+    position: absolute;
+    left:0;
+    height: 2px;
+    width: 0%;
+    background-color: rgb(75, 194, 135);
+    bottom: 15px;
+    transition:0.3s ;
+}
+.nav-element:hover{
+    color:rgb(75, 194, 135) ;
+    transition:0.5s ;
+
+}
+.nav-element:hover::before{
+    width: 100%;
+}
+.rechercher{
+    border-radius: 51px;
+    height: 40px;
+    width: 250px  ;
+    border-width: 0;
+    margin-left: 0px;
+    background-color: rgb(75, 194, 135);
+}
+
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+.icon {
+    padding-left: 30px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-position: 90%;
+    background-size: 20px;
+    background-color: rgb(220, 238, 231);
+    margin-right: 0px;
+    width: 300px;
+}
+.input-position-group {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.content{
+   margin-top: 100px;
+}
+.home-page-text{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 14px;
+}
+
+.btn-apply {
+
+width: 150px;
+height: 60px;
+cursor: pointer;
+border-radius: 150px;
+box-shadow: 5px 6px 35px -10px rgb(75, 194, 135);
+border: none;
+--c:linear-gradient(rgb(75, 194, 135)  0 0); 
+background: var(--c), var(--c);
+background-size: 150% 0px;
+background-position:50% 70% ;
+background-repeat:no-repeat;
+transition: .3s linear;
+}
+.btn-apply:hover {
+transform: translateX(0px) translateY(-2px) translateZ(15px);
+background-size: 150% 7px;
+background-position: 100% 100%;
+}
+.btn-learn {
+background-size: 150% 0px;
+background-position:50% 35% ;
+
+}
+.btn-learn:hover {
+    transform: translateX(0px) translateY(-2px) translateZ(15px);
+    background-size:100% 7px;
+    background-position: 100% 00%;
+}
+.about-img{
+    height: 150px;
+}
+.about-text{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.image-about-principale{
+    margin-left: 200px;
+    height: 370px;
+    width: 750px;
+}
+.btn-register{
+    margin-top: 200px;
+    margin-left: 50px;
+    position: relative;
+    background-size: 150% 0px;
+    background-position:50% 35% ;
+}
+.btn-register-mobile{
+    background-size: 150% 0px;
+    background-position:50% 35% ;
+}
+.btn-register:hover {
+    transform: translateX(0px) translateY(-2px) translateZ(15px);
+    background-size:100% 7px;
+    background-position: 100% 100%,100% 0%;
+}
+.btn-register-mobile:hover {
+    transform: translateX(0px) translateY(-2px) translateZ(15px);
+    background-size:100% 7px;
+    background-position: 100% 100%,100% 0%;
+}
+.btn-open-image{
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+.btn-open{
+    border: none;
+    margin-top: 13px;
+}
+.nav-mobile-item{
+    text-decoration: none;
+    list-style-type: none;  
+    padding: 10px;
+    background: none;   
+}
+.nav-mobile-element{
+    text-decoration: none;  
+    background: none;
+    color: black;
+    transition: 0.3s;
+}
+.nav-mobile-element:hover{
+    color: white;
+}
+.navbar-content{
+    height: 300px;
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    position: absolute;
+    background:rgb(75, 194, 135) ;
+}   
+.content-old{
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    transform: translateX(25px) translateY(10px) translateZ(15px);
+}
+.show {
+    opacity: 1;
+    transform: translateX(20px) translateY(10px) translateZ(15px);
+    transition: 0.2s;
+}
+
+
+
+#footer {
+
+}
+
+
+/* register page */
+
+
+
+
+.screen{		    	
+	box-shadow: 0px 4px 8px 0 rgb(75, 194, 135) , 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+  
+  
+

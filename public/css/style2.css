@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.input-create
+{
+	border-radius: 10px;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	outline: none;
+	transition: 0.5s;
+	margin-top: 10px;
+}
+.label {
+	color: #777;
+  }
+.input-create:hover{
+	border-color: green;
+}
+.input-create:focus{
+	outline: none;
+	border-color: rgb(75, 194, 135);
+	box-shadow: none;
+}
+.title{
+	
+	font-family: 'Lobster', cursive;
+		background: -webkit-linear-gradient(gray, black);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	  
+}
+.box{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	margin: auto;
+	margin-top: 150px;
+	width: 85%;
+	padding: 20px;
+}
+textarea{
+	margin-top: 10px;
+	
+}
+.margin-p{
+	margin-top: 42px;
+	font-size: 20px;
+}
+.checkbox{
+	color: red;
+	background-color: red;
+	border-color:red;
+
+}
+.checkbox:checked{
+	color: red;
+	background-color: #2196F3;
+}
+
+
+
