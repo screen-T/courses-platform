@@ -8,19 +8,14 @@
   </head>
   <body class="container-fluid">
     <div class="navbarv2">
-
-    
     <div class="d-xl-none mobile-navbar">
-      <button class="btn-open " id="open">
+      <button class="btn-open" id="open"  onclick="show()">
         <img class="btn-open-image" src="{{url('image/menu.png')}}" alt="openbar">
       </button>
-      <div class="">
+      <div class="nav-disable">
         <ul class="navbar-content content-old">
           <li class="nav-mobile-item">
-            <a href="{{route('welcome')}}" class="nav-mobile-element" id=""> Home </a>
-          </li>
-          <li class="nav-mobile-item">
-            <a href="{{route('welcome')}}#about" class="nav-mobile-element" id=""> About us </a>
+            <a href="{{route('welcome')}}" class="nav-mobile-element " id=""> Home </a>
           </li>
           <li class="nav-mobile-item">
             <a href="{{route('welcome')}}#about" class="nav-mobile-element" id=""> About us </a>
@@ -29,11 +24,24 @@
             <a href="{{route('course.index')}}" class="nav-mobile-element" id=""> Courses </a>
           </li>
           <li class="nav-mobile-item">
-            <a href="{{route('info')}}" class="nav-mobile-element" id=""> Info </a>
-          </li>
-          <li class="nav-mobile-item">
             <a href="{{route('contact')}}" class="nav-mobile-element" id=""> Contact us </a>
           </li>
+          <li class="nav-mobile-item">
+            @guest
+            @if (Route::has('login')) 
+            <a class="nav-mobile-element" href="{{ route('login') }}">{{ __('Login') }}</a>
+             @endif 
+             @if (Route::has('register')) 
+             <a class="nav-mobile-element" href="{{ route('register') }}">{{ __('Register') }}</a> 
+             @endif
+             @else <a id="navbarDropdown" class="nav-mobile-element" href="/profile" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+             {{ Auth::user()->name }}
+           </a>
+           <a class="nav-mobile-element" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+           </a>
+           <form class="nav-mobile-element" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"> @csrf </form>
+           </li> @endguest 
         </ul>
       </div>
     </div>
@@ -44,8 +52,15 @@
             <a href="{{route('welcome')}}" class="nav-element" id=""> Home </a>
             <a href="{{route('welcome')}}#about" class="nav-element" id=""> About us </a>
             <a href="{{route('course.index')}}" class="nav-element" id=""> Course </a>
-            <a href="{{route('info')}}" class="nav-element" id=""> Info </a>
-            <a href="{{route('contact')}}" class="nav-element" id=""> Contact us </a> @guest @if (Route::has('login')) <a class="nav-element" href="{{ route('login') }}">{{ __('Login') }}</a> @endif @if (Route::has('register')) <a class="nav-element" href="{{ route('register') }}">{{ __('Register') }}</a> @endif @else <a id="navbarDropdown" class="nav-element" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <a href="{{route('contact')}}" class="nav-element" id=""> Contact us </a> 
+            @guest
+             @if (Route::has('login')) 
+             <a class="nav-element" href="{{ route('login') }}">{{ __('Login') }}</a>
+              @endif 
+              @if (Route::has('register')) 
+              <a class="nav-element" href="{{ route('register') }}">{{ __('Register') }}</a> 
+              @endif
+              @else <a id="navbarDropdown" class="nav-element" href="/profile" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
               {{ Auth::user()->name }}
             </a>
             <a class="nav-element" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -68,7 +83,6 @@
     @section('footer')
       @include('layouts.footer')
     @show
-    
     <script src="{{url('js/main.js')}}"></script>
   </body>
 </html>

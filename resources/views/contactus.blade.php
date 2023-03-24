@@ -5,7 +5,4 @@
 </title>
 @endsection
 @section('content')
-@if(Auth::check())
-<h1>Test contact</h1> 
-@endif
 @endsection

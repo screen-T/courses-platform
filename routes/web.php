@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\coursescontroller;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,7 @@ Route::get('/info', [StaticController::class,'info'])->name('info');
 Route::get('/contact', [StaticController::class,'contactus'])->name('contact');
 Route::get('/programs', [StaticController::class,'programs'])->name('programs');
 Route::resource('/course',coursescontroller::class) ;
+Route::resource('/profile', ProfileController::class);
 
 
 Auth::routes();

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+
 .input-create
 {
 	border-radius: 10px;
@@ -52,6 +54,24 @@ textarea{
 .checkbox:checked{
 	color: red;
 	background-color: #2196F3;
+}
+.courses-bg{
+	color: rgb(75, 194, 135);
+	font-family:'Edu NSW ACT Foundation';
+}
+.title-course{
+	
+	color:  rgb(28, 117, 72);
+	font-family:'Edu NSW ACT Foundation';
+}
+
+iframe{
+	margin-top: 50px;
+	height:400px;
+	width: 100%;
+	box-shadow: rgb(75, 194, 135) 0px 7px 29px 0px;
+	/* add on java script to do  */
+	
 }
 
 

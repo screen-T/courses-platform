@@ -23,24 +23,24 @@
 
 <hr class="container mt-md-4">
 @foreach ($courses as $course )
-<div class="row">
-  <div class="col-md-6">
-    <div class="offset-md-1 program-content mt-md-3">
-      <img class="course-image img-fluid" src="{{$course->image_path}}" alt="">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="offset-md-1 program-content mt-md-3">
+        <img class="course-image img-fluid" src="{{$course->image_path}}" alt="">
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="program-content-description mt-md-3">
+        <h1> {{$course->title}}</h1>
+        <p> {{$course->description}}</p>
+        <form action="course/{{$course->slug}}" class="offset-md-8">
+          <button class="btn-apply">Apply now</button>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="col-md-5">
-    <div class="program-content-description mt-md-3">
-      <h1> {{$course->title}}</h1>
-      <p> {{$course->description}}</p>
-      <form action="course/{{$course->slug}}" class="offset-md-8">
-        <button class="btn-apply">Apply now</button>
-      </form>
-    </div>
   </div>
-</div>
-</div>
-</div>
-<hr class="container mt-md-4">
+  </div>
+  <hr class="container mt-md-4">
 @endforeach
 @endsection

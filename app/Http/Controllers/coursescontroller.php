@@ -37,9 +37,9 @@ class coursescontroller extends Controller
         ]);
         return redirect("/course") ;
     }
-    public function show($id)
+    public function show($slug)
     {
-        //
+        return view('course.show')->with('courses',course::where('slug',$slug)->first()) ;
     }
 
     public function edit($id)

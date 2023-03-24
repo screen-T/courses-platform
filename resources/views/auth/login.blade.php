@@ -1,6 +1,9 @@
-@extends('layouts.layout') @section('head')
-<link rel="stylesheet" href="{{url('css\style2.css')}}">
-<title> login </title> @endsection @section('content') <div class="container">
+@extends('layouts.layout')
+@section('head')
+  <link rel="stylesheet" href="{{url('css\style2.css')}}">
+  <title> login </title> 
+@endsection 
+@section('content') <div class="container">
   <div class="row">
     <div class="">
       <div class="box">
